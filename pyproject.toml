@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "matrix-core-kernel"
+version = "1.3.1"
+description = "Matrix Core Kernel remote executable spine for Layer -3 through Layer 9 validation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Proprietary-Research-Artifact"}
+authors = [{name = "ZSK Matrix Project"}]
+keywords = ["matrix", "operator", "symbolic", "validation", "governance"]
+
+[project.scripts]
+matrix-core = "matrix_core_kernel.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+matrix_core_kernel = ["py.typed"]
