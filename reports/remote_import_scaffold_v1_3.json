@@ -1,0 +1,26 @@
+{
+  "name": "matrix_remote_import_scaffold_v1_3",
+  "repository_full_name": "triangel7777-tech/Matrix-Core-Kernel",
+  "branch": "import-matrix-core-v1-2",
+  "source_artifact": "matrix_core_kernel_v1_2.zip",
+  "source_artifact_sha256": "b5fadff754f3131ee315ee080a3a5abaa23c3855caf8c558829d937acfa59994",
+  "remote_action": "added_remote_import_execution_plan",
+  "commit_sha": "8708291c1484a35c4fd5a62acffbc45ac9a22980",
+  "level_6_claimed": false,
+  "truth_label": "remote_import_scaffold_not_external_validation_proof",
+  "next_required_actions": [
+    "import_full_source_tree",
+    "run_github_actions_ci",
+    "publish_release_asset",
+    "verify_release_asset_sha256",
+    "run_external_clean_install_from_release_asset",
+    "import_external_evidence",
+    "evaluate_level6_candidate_gate"
+  ],
+  "blocked_level6_requirements": [
+    "live_ci_success",
+    "published_release_asset_verification",
+    "external_clean_install_proof",
+    "production_key_custody_evidence"
+  ]
+}

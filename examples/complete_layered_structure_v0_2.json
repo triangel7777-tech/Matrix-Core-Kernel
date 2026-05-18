@@ -1,0 +1,20 @@
+{
+  "name": "complete_layered_structure_v0_2",
+  "truth_label": "symbolic_master_layer_schema",
+  "layers": [
+    {"id": -3, "name": "Primal Agon Property Values", "core_function": "Define P1/P2 and thresholded candidate fusion"},
+    {"id": -2, "name": "Agons", "core_function": "Admit stable emergent Agons"},
+    {"id": -1, "name": "Proto-Scalars", "core_function": "Construct candidate proto-scalars from admitted Agons"},
+    {"id": 0, "name": "Scalar Substrate", "core_function": "Construct scalar-domain profiles"},
+    {"id": 1, "name": "Structured Spaces", "core_function": "Construct operator domains and codomains"},
+    {"id": 2, "name": "Operators / Matrices", "core_function": "Define typed operator objects"},
+    {"id": 3, "name": "Composition Engine", "core_function": "Build operator algebras and composition graphs"},
+    {"id": 4, "name": "Meta-Recursive Operators", "core_function": "Apply operators to operator structures"},
+    {"id": 5, "name": "Meta-Dynamical Evolution", "core_function": "Evolve operator graphs over bounded steps"},
+    {"id": 6, "name": "Meta-Self-Reflective Rules", "core_function": "Govern evolution-rule candidates"},
+    {"id": 7, "name": "Emergent Application", "core_function": "Project operators into declared domains"},
+    {"id": 8, "name": "Self-Optimization", "core_function": "Score feedback and propose bounded refinements"},
+    {"id": 9, "name": "Universal Emergence", "core_function": "Generate and route candidate novelty"}
+  ],
+  "truth_boundary": "Symbolic schema only; not Level 6 proof."
+}
