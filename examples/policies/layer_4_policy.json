@@ -1,0 +1,1 @@
+{"name":"layer_4_policy","truth_label":"symbolic_layer_policy","layer_id":4,"validation_gates":["finite_horizon_required","ledger_required","truth_label_required","admission_gate_required"]}
