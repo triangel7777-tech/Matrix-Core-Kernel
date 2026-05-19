@@ -1,0 +1,14 @@
+{
+  "name": "matrix_core_ci_trigger_v1_9",
+  "purpose": "Trigger Matrix Core CI workflow after repo-root workflow strengthening",
+  "truth_boundary": "This trigger file is not CI success evidence. It only creates a push event that may start a workflow run.",
+  "level_6_claimed": false,
+  "required_next_evidence": [
+    "workflow_run_visible",
+    "workflow_run_success",
+    "workflow_job_logs_imported",
+    "release_asset_published",
+    "release_asset_sha256_verified",
+    "external_clean_install_from_release_asset"
+  ]
+}
