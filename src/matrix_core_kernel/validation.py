@@ -84,7 +84,7 @@ def validate_layer_policy(data: Dict[str, Any]) -> ValidationResult:
 def validate_policy_directory(path: str | Path) -> ValidationResult:
     path = Path(path)
     result = ValidationResult()
-    files = sorted(path.glob("layer_*_policy.json")) + sorted(path.glob("layer_minus*_policy.json"))
+    files = sorted({*path.glob("layer_*_policy.json"), *path.glob("layer_minus*_policy.json")})
     if not files:
         result.add("policy_files", "no policy files found")
         return result

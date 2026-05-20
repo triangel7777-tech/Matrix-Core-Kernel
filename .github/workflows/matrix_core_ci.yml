@@ -18,9 +18,9 @@ jobs:
         run: python --version
       - name: Install package
         run: python -m pip install -e .
-      - name: Run unit tests
+      - name: Unit tests
         run: python -m unittest discover -s tests -v
-      - name: Validate CLS example
+      - name: CLS validation
         run: matrix-core validate examples/complete_layered_structure_v0_2.json
-      - name: Validate layer policies
+      - name: Policy validation
         run: matrix-core validate-all examples/policies

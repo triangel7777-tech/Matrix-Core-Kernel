@@ -1,0 +1,6 @@
+{
+  "name": "matrix_core_ci_pr_trigger_v1_9",
+  "purpose": "Open a pull request to trigger Matrix Core CI on pull_request event",
+  "truth_boundary": "This trigger file is not CI success evidence. It only creates a PR event that may start a workflow run.",
+  "level_6_claimed": false
+}
