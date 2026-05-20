@@ -1,0 +1,15 @@
+{
+  "name": "matrix_core_kernel_v2_0_release_candidate_manifest",
+  "artifact_filename": "matrix_core_kernel_v2_0.zip",
+  "artifact_sha256": "fd08fcd3a1edeeb886d1945e2821361cdd4c5208af216e62277c1f2129452775",
+  "artifact_size_bytes": 3666,
+  "source_evidence": "Successful live PR CI run 26173874443 and merged PR #5",
+  "truth_boundary": "This manifest is not an official GitHub Release asset. It records the expected asset hash for later release publication and verification.",
+  "level_6_claimed": false,
+  "blocked_requirements": [
+    "official_github_release_asset_publication",
+    "release_asset_sha256_verification_from_published_asset",
+    "external_clean_install_from_published_asset",
+    "production_key_custody_evidence"
+  ]
+}
