@@ -24,3 +24,15 @@ jobs:
         run: matrix-core validate examples/complete_layered_structure_v0_2.json
       - name: Policy validation
         run: matrix-core validate-all examples/policies
+      - name: Build proof artifact
+        run: |
+          mkdir -p dist proof
+          zip -r dist/matrix-core-kernel-source-${GITHUB_SHA}.zip . -x '.git/*' 'dist/*' 'proof/*'
+          sha256sum dist/matrix-core-kernel-source-${GITHUB_SHA}.zip | tee proof/matrix-core-kernel-source-${GITHUB_SHA}.sha256
+      - name: Upload proof artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: matrix-core-kernel-source-proof
+          path: |
+            dist/matrix-core-kernel-source-${{ github.sha }}.zip
+            proof/matrix-core-kernel-source-${{ github.sha }}.sha256
