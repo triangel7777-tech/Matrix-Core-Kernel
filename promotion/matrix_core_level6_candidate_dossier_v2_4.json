@@ -1,0 +1,56 @@
+{
+  "name": "matrix_core_level6_candidate_dossier_v2_4",
+  "repository_full_name": "triangel7777-tech/Matrix-Core-Kernel",
+  "created_at_utc": "2026-05-20T22:40:00Z",
+  "level_6_claimed": false,
+  "current_status": "level_6_candidate_evidence_component",
+  "verified_components": {
+    "live_pr_ci_success": {
+      "run_id": 26173874443,
+      "job_id": 76998714953,
+      "result": "success",
+      "evidence": "unit tests, CLS validation, policy validation passed"
+    },
+    "workflow_artifact_generation": {
+      "run_id": 26193614455,
+      "artifact_id": 7123012108,
+      "digest": "sha256:7c2cc96a41507757aaca2ce132409cd56fc43223d16d16a0da6daa9150b5bda6",
+      "result": "success"
+    },
+    "clean_install_from_workflow_generated_source_artifact": {
+      "run_id": 26193793111,
+      "job_id": 77068412586,
+      "result": "success",
+      "installed_package": "matrix-core-kernel-1.3.1",
+      "source_zip_sha256": "5e42f553a16ef79d94fab4a50ae10d290602c165020f6651d9e7dd062e02a5c2",
+      "artifact_digest": "sha256:79336f8910a774eca722c167a5e4913df7f1d2946a06d6f7b8a2c2e851109e6e",
+      "installed_cli_validation": {
+        "cls_validation": {"ok": true, "issue_count": 0},
+        "policy_validation": {"ok": true, "issue_count": 0}
+      }
+    },
+    "release_candidate_manifest": {
+      "path": "release_assets/v2_0/release_candidate_manifest.json",
+      "expected_artifact": "matrix_core_kernel_v2_0.zip",
+      "expected_sha256": "fd08fcd3a1edeeb886d1945e2821361cdd4c5208af216e62277c1f2129452775"
+    },
+    "issue_tracker": {
+      "issue_number": 6,
+      "latest_proof_update_comment_id": 4503202037
+    }
+  },
+  "blocked_components": {
+    "official_github_release_asset_publication": "missing",
+    "published_release_asset_sha256_verification": "missing",
+    "external_clean_install_from_official_published_release_asset": "missing",
+    "production_key_custody_evidence": "missing",
+    "external_audit": "missing",
+    "production_deployment": "missing"
+  },
+  "promotion_decision": {
+    "full_level_6_ready": false,
+    "reason": "Strong CI and clean-install evidence exists, but official release asset publication, published asset verification, and production key custody remain incomplete."
+  },
+  "truth_boundary": "This dossier is a Level 6 candidate evidence dossier, not a full Level 6 certification. It does not prove empirical discovery, mathematical universality, production deployment, or autonomous real-world operation.",
+  "next_best_action": "Publish official GitHub Release asset, verify hash from published asset, run clean install from that official asset, and add production key custody evidence."
+}
