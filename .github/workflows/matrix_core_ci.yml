@@ -26,9 +26,21 @@ jobs:
         run: matrix-core validate-all examples/policies
       - name: Build proof artifact
         run: |
-          mkdir -p dist proof
-          zip -r dist/matrix-core-kernel-source-${GITHUB_SHA}.zip . -x '.git/*' 'dist/*' 'proof/*'
+          mkdir -p dist proof clean_install_proof
+          zip -r dist/matrix-core-kernel-source-${GITHUB_SHA}.zip . -x '.git/*' 'dist/*' 'proof/*' 'clean_install_proof/*'
           sha256sum dist/matrix-core-kernel-source-${GITHUB_SHA}.zip | tee proof/matrix-core-kernel-source-${GITHUB_SHA}.sha256
+      - name: Clean install from proof artifact
+        run: |
+          python -m venv clean_install_venv
+          ./clean_install_venv/bin/python -m pip install --upgrade pip
+          ./clean_install_venv/bin/python -m pip install dist/matrix-core-kernel-source-${GITHUB_SHA}.zip
+          ./clean_install_venv/bin/matrix-core validate examples/complete_layered_structure_v0_2.json | tee clean_install_proof/cls_validation.json
+          ./clean_install_venv/bin/matrix-core validate-all examples/policies | tee clean_install_proof/policy_validation.json
+          ./clean_install_venv/bin/python - <<'PY' | tee clean_install_proof/import_version.txt
+          import matrix_core_kernel
+          print(matrix_core_kernel.__version__)
+          PY
+          sha256sum clean_install_proof/* | tee clean_install_proof/checksums.sha256
       - name: Upload proof artifact
         uses: actions/upload-artifact@v4
         with:
@@ -36,3 +48,4 @@ jobs:
           path: |
             dist/matrix-core-kernel-source-${{ github.sha }}.zip
             proof/matrix-core-kernel-source-${{ github.sha }}.sha256
+            clean_install_proof/*
