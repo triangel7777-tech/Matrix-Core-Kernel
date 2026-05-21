@@ -1,0 +1,33 @@
+{
+  "title": "Matrix Core Production Key Custody Statement v2.5",
+  "type": "object",
+  "required": [
+    "key_type",
+    "key_purpose",
+    "custody_owner_role",
+    "creation_date",
+    "storage_location_class",
+    "signing_authority_policy",
+    "rotation_policy",
+    "revocation_policy",
+    "incident_response_policy",
+    "development_production_key_separation",
+    "private_key_material_committed",
+    "truth_boundary"
+  ],
+  "properties": {
+    "key_type": {"type": "string"},
+    "key_purpose": {"type": "string"},
+    "custody_owner_role": {"type": "string"},
+    "creation_date": {"type": "string"},
+    "storage_location_class": {"type": "string"},
+    "signing_authority_policy": {"type": "string"},
+    "rotation_policy": {"type": "string"},
+    "revocation_policy": {"type": "string"},
+    "incident_response_policy": {"type": "string"},
+    "development_production_key_separation": {"type": "boolean"},
+    "private_key_material_committed": {"type": "boolean"},
+    "attestor": {"type": "string"},
+    "truth_boundary": {"type": "string"}
+  }
+}
