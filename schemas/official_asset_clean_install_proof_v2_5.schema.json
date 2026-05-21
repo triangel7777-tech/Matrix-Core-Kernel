@@ -1,0 +1,36 @@
+{
+  "title": "Matrix Core Official Asset Clean Install Proof v2.5",
+  "type": "object",
+  "required": [
+    "environment_id",
+    "python_version",
+    "operating_system",
+    "release_asset_url",
+    "asset_sha256_verified",
+    "install_command",
+    "installed_package_version",
+    "cli_validation_results",
+    "proof_log_sha256",
+    "truth_boundary"
+  ],
+  "properties": {
+    "environment_id": {"type": "string"},
+    "python_version": {"type": "string"},
+    "operating_system": {"type": "string"},
+    "release_asset_url": {"type": "string"},
+    "asset_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "asset_sha256_verified": {"type": "boolean"},
+    "install_command": {"type": "string"},
+    "installed_package_version": {"type": "string"},
+    "cli_validation_results": {
+      "type": "object",
+      "required": ["cls_validation", "policy_validation"],
+      "properties": {
+        "cls_validation": {"type": "object"},
+        "policy_validation": {"type": "object"}
+      }
+    },
+    "proof_log_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "truth_boundary": {"type": "string"}
+  }
+}
