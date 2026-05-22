@@ -1,0 +1,53 @@
+{
+  "name": "matrix_core_post_release_evidence_intake_v3_1",
+  "release_tag": "matrix-core-v2.7.0",
+  "release_url": "",
+  "release_workflow_run_id": null,
+  "release_workflow_conclusion": "pending",
+  "assets": {
+    "release_zip": {
+      "filename": "",
+      "url": "",
+      "size_bytes": null,
+      "sha256": ""
+    },
+    "release_asset_sha256_file": {
+      "filename": "release_asset.sha256",
+      "url": "",
+      "content_sha256_value": ""
+    },
+    "release_asset_proof_json": {
+      "filename": "release_asset_proof.json",
+      "url": "",
+      "asset_sha256_value": ""
+    }
+  },
+  "hash_verification": {
+    "performed": false,
+    "downloaded_zip_sha256": "",
+    "matches_sha256_file": false,
+    "matches_proof_json": false,
+    "result": "pending"
+  },
+  "official_asset_clean_install": {
+    "performed": false,
+    "environment_id": "",
+    "operating_system": "",
+    "python_version": "",
+    "install_command": "",
+    "installed_package_version": "",
+    "cls_validation": null,
+    "policy_validation": null,
+    "result": "pending"
+  },
+  "production_key_custody_statement": {
+    "provided": false,
+    "record_path": "",
+    "result": "pending"
+  },
+  "promotion_decision": {
+    "full_level_6_ready": false,
+    "reason": "Awaiting official release run, published asset hash verification, official-asset clean install proof, and production key custody statement."
+  },
+  "truth_boundary": "Template only. This is not release proof until populated with verified evidence."
+}
