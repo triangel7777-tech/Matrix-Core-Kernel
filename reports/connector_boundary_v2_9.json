@@ -1,0 +1,38 @@
+{
+  "name": "matrix_core_connector_boundary_v2_9",
+  "repository_full_name": "triangel7777-tech/Matrix-Core-Kernel",
+  "created_at_utc": "2026-05-22T22:59:00Z",
+  "authenticated_user": "triangel7777-tech",
+  "repository_permissions": {
+    "admin": true,
+    "maintain": true,
+    "push": true,
+    "triage": true,
+    "pull": true
+  },
+  "confirmed_release_workflow": {
+    "path": ".github/workflows/matrix_core_release_asset.yml",
+    "supports_workflow_dispatch": true,
+    "required_input": "release_tag",
+    "example_release_tag": "matrix-core-v2.7.0",
+    "creates_github_release": true
+  },
+  "connector_available_actions_checked": true,
+  "connector_missing_actions": [
+    "workflow_dispatch invocation",
+    "tag creation as git ref/tag object",
+    "native GitHub Release creation/upload"
+  ],
+  "issue_6_status": {
+    "assigned_to": "triangel7777-tech",
+    "labels_added": [
+      "manual-action-required",
+      "connector-boundary",
+      "official-release-blocker"
+    ]
+  },
+  "current_validation_level": "Level 6 candidate evidence component",
+  "level_6_claimed": false,
+  "truth_boundary": "Repository permissions are sufficient, but the exposed connector tools do not include workflow_dispatch invocation, tag creation, or native release upload. Manual GitHub Actions execution remains required.",
+  "next_best_action": "Open GitHub Actions, run Matrix Core Release Asset on main with release_tag=matrix-core-v2.7.0, then verify release assets and complete clean-install/custody proofs."
+}
